@@ -1,0 +1,13 @@
+
+
+@media (max-width: 768px) {
+  .swiper-button-prev {
+    visibility: hidden;
+    color: white;
+  }
+  .swiper-button-next {
+    visibility: hidden;
+    color: white;
+  }
+}
+

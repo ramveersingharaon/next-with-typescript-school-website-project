@@ -2,32 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+body{
+  overflow-x: hidden
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.navItemsUnderLine {
+  @apply relative;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.navItemsUnderLine::before {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgb(53, 37, 37);
+  top: 25px;
+  left: 0;
+  position: absolute;
+  transition: all 0.3s;
+  border-radius: 10px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.navItemsUnderLine:hover::before {
+  width: 100%;
+}
+
+.heroBefore::before {
+  content: "";
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  
+}
+
+.navItemUnderLine::before {
+  content: "";
+  width: 0;
+  height: 5px;
+  background-color: white;
+  top: 23px;
+  left: 0;
+  position: absolute;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+.navItemUnderLine:hover::before {
+  width: 100%;
+}
+
+
+.hedingUnderLine::before {
+  content: "";
+  height: 8px;
+  width: 50%;
+  background-color: #d2691e;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  transition: all 0.3s;
+  border-radius: 5px;
+  z-index: 30;
+}
+
+
+.leaveReviewContainerShadow{
+  box-shadow: 0 0 10px #0000008f;
+  border-radius: 10px;
+  
+}
+.leaveReviewContainerShadow:hover{
+  box-shadow: 0 0 20px #0000008f;
+  border-radius: 10px;
+
+  
+}
+
+.roundedShodow{
+  box-shadow: 0 0 10px #0000008f;
+border-radius: 50%;
+  
+}
+.roundedShodow:hover{
+  box-shadow: 0 0 20px #0000008f;
+border-radius: 50%;
+  
+
+  
 }
